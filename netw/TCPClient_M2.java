@@ -4,7 +4,7 @@ import java.net.*;
 
 import java.net.Socket;
 
-public class TCPClient {
+public class TCPClient_M2 {
 	public static void main(String argv[]) throws Exception 
     { 
         String sentence;  
