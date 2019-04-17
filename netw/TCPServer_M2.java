@@ -6,7 +6,7 @@ public class TCPServer_M2 {
 	public static void main(String argv[]) throws Exception 
     { 
       String clientSentence; 
-      String sentence;  
+      String sentence="";  
       ServerSocket welcomeSocket = new ServerSocket(6789); 
       Socket connectionSocket = welcomeSocket.accept();
       System.out.println("Connected to user");
@@ -20,7 +20,7 @@ public class TCPServer_M2 {
       DataOutputStream  outToClient = 
               new DataOutputStream(connectionSocket.getOutputStream()); 
 
-      while(true) { 
+      while(!sentence.equals("Disconnect")) { 
 
                  clientSentence = inFromClient.readUTF();     
                 
@@ -29,6 +29,7 @@ public class TCPServer_M2 {
     	  sentence = inFromUser.readLine(); 
     	  outToClient.writeUTF(sentence);
       }
+      welcomeSocket.close();
       } 
           } 
       
