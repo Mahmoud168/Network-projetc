@@ -2,7 +2,7 @@ package netw;
 import java.io.*; 
 import java.net.*; 
 
-public class TCPServer {
+public class TCPServer_M2 {
 	public static void main(String argv[]) throws Exception 
     { 
       String clientSentence; 
