@@ -8,7 +8,7 @@ public class TCPClient_M2 {
 	public static void main(String argv[]) throws Exception 
     { 
         String sentence;  
-        String Serversentence;
+        String Serversentence="";
         BufferedReader inFromUser = 
           new BufferedReader(new InputStreamReader(System.in)); 
 
@@ -30,7 +30,7 @@ public class TCPClient_M2 {
         	System.out.println("CONNECTED");
         	
         	
-        	while(!sentence.equals("DISCONNECT")) {
+        	while(!Serversentence.equals("Disconnect")) {
         		
         		  sentence = inFromUser.readLine(); 
             	  outToServer.writeUTF(sentence);
@@ -44,3 +44,4 @@ public class TCPClient_M2 {
                          
           } 
 }
+
